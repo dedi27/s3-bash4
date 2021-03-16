@@ -217,7 +217,7 @@ performRequest() {
   local timestamp=$(date -u "+%Y-%m-%d %H:%M:%S")
   local isoTimestamp=$(date -ud "${timestamp}" "+%Y%m%dT%H%M%SZ")
   local dateScope=$(date -ud "${timestamp}" "+%Y%m%d")
-  local host=$(convS3RegionToEndpoint "${AWS_REGION}")
+  local host=s3.portal-tio.unifique-hd.net
 
   # Generate payload hash
   if [[ $METHOD == "PUT" ]]; then
